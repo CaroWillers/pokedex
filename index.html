@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="./img/pokemon.ico">
+    <script src="script.js"></script>
+    <script src="navigation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <title>Pokedex</title>
+</head>
+<body class="body-no-background" onload="init()">
+    <main>
+        <div class="container_load" id="loadingIndicator">
+            <div class="text">
+                <h3>Loading....</h3>
+            </div>
+            <div class="loader_box">
+                <div class="spinner"></div>
+            </div>
+        </div>        
+        <div class="header">
+            <div class="pokemon"></div>
+            <h1 class="h1Pokedex ">POKEDEX</h1> 
+            <div class="searchField">
+                <img class="img" src="./img/search_icon.png">
+                <input role="search" placeholder="Suche Dein Pokemon" type="text" id="search" onkeyup="searchPokemon()"></input>
+            </div>
+        </div>
+        <div id="pokedex" class="pokedex-container"></div> 
+        <button class="button" id="loadMore" onclick="loadMorePokemons()"><span>load more</span></button>
+        <div id="pokemon-card" class="dialog-bg d-none" onclick="closePokemonCard()">
+            <div id="dialog" class="dialog d-none"> 
+                <div class="pokemon-card" id="pokemon-header"></div>
+                <div class="info-container">
+                    <nav class="navigation">
+                        <a id="navAbout" class="about-container activeLink" href="#">About</a> <!-- 'activeLink' hebt About standardmäßig hervor -->
+                        <a id="navBaseStats" class="base-stats-container" href="#">Base Stats</a>
+                        <a id="navEvolution" class="evolution-container" href="#">Evolution</a>
+                        <a id="navMoves" class="moves-container" href="#">Moves</a>
+                      </nav>
+                    <div class="info-content" id="info-content"></div>
+                        <div class="prevandnextButtons">  
+                            <button id="previousButton" class="closePokemonCardButton" onclick="previousPokemonCard()">&#8592;</button>
+                            <button id="nextButton" class="closePokemonCardButton" onclick="nextPokemonCard()">&#8594;</button>
+                        </div> 
+                    </div>                                
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
