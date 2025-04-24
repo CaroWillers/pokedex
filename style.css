@@ -275,7 +275,7 @@ h3 {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    top: -180px;
+    top: -200px;
     left: 40px;
 }
 
@@ -332,7 +332,7 @@ h3 {
     display: flex;
     align-items: center;
     gap: 250px;
-    margin-top: 20px;
+    margin-top: 10px;
     z-index: 2;
 }
 
@@ -460,7 +460,7 @@ h1 {
     height: auto;
     align-self: center;
     transition: transform 0.3s ease-in-out;
-    margin-top: -200px;
+    margin-top: -220px;
     position: relative;
     z-index: 20;
     margin-bottom: 20px;
@@ -469,13 +469,13 @@ h1 {
 .h1pokemonCard {
     text-transform: capitalize; 
     margin: 0;
-    padding-top: 80px; 
+    padding-top: 60px; 
 } 
 
 .h3pokemonCard {
     text-transform: capitalize;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 70px;
 }
 
 .navigation {
